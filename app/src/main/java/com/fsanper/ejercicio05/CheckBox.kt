@@ -57,7 +57,7 @@ fun CheckBoxListExample() { // Ejecutamos esta en el main //
             checked = checked,
             onCheckedChange = { checked = it },
             // Se podría entender mejor puesto así:
-            // 
+            //
             label = it
         )
     }
@@ -104,8 +104,6 @@ fun LabelledCheckBox(
         )
         Spacer(modifier = Modifier.width(15.dp))
         Text(text = label)
-
-
     }
 }
 
@@ -127,7 +125,7 @@ fun MyCheckBoxWithText() {
     }
 
     Row(
-        modifier = Modifier.height(800.dp),
+        modifier = Modifier.height(48.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Checkbox(
