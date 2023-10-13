@@ -20,7 +20,11 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-
+@Preview(
+    name = "P1",
+    showBackground = true, fontScale = 1.1f, showSystemUi = true, apiLevel = 33,
+    device = Devices.NEXUS_6
+)
 @Composable
 fun CardMinimal() {
     Card() {
