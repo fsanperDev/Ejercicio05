@@ -100,9 +100,9 @@ fun DialogExamples(){
 }
 
 @Composable
-fun MyCustomDialog(show: Boolean, onDismiss: () -> Unit) {
+fun MyCustomDialog(show: Boolean, onDimissRequest: () -> Unit) {
     if (show){
-        Dialog(onDismissRequest = { onDismiss }) {
+        Dialog(onDismissRequest = { onDimissRequest() }) {
             Column(
                 Modifier
                     .background(Color.White)
@@ -152,7 +152,7 @@ fun DialogWithImage(
     painter: Painter,
     imageDescription: String
 ) {
-    Dialog(onDismissRequest = { onDimissRequest }) {
+    Dialog(onDismissRequest = { onDimissRequest() }) {
         Card(
             modifier = Modifier
                 .fillMaxWidth()
@@ -201,7 +201,7 @@ fun DialogWithImage(
 
 @Composable
 fun MinimalDialog(onDimissRequest: () -> Unit) {
-    Dialog(onDismissRequest = { onDimissRequest }) {
+    Dialog(onDismissRequest = { onDimissRequest() }) {
         Card (
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier
